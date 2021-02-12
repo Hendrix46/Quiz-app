@@ -28,7 +28,7 @@ const App=()=> {
       const newQuestions = await fetchQuizQuestions(
         TOTAL_QUESTIONS,
         Difficulty.EASY
-      );
+      ).catch(e => alert('Something bad happened try again'));
       setQuestions(newQuestions);
       setScore(0);
       setUserAnswers([]);
